@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom styling</title>
+
+    <style media="screen">
+      :root {
+        --navHeight: 20px;
+        --containerWidth: 500px;
+        --containerPadding: 20px;
+        --headerHeight: 200px;
+        --headerTitle: 20px;
+        --textSize: 14px;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #000000;
+        height: var(--navHeight);
+        padding: 10px;
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      nav h1 {
+        font-size: var(--navTitle);
+        color: #ffffff;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--containerWidth);
+        padding: var(--containerPadding);
+        margin: auto;
+        box-sizing: border-box;
+      }
+
+      header {
+        width: 100%;
+        height: var(--headerHeight);
+        background-color:#eeeeee;
+        display: table;
+      }
+
+      header h1 {
+        font-size: var(--headerTitle);
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      section p {
+        font-size: var(--textSize);
+      }
+
+      .area{
+        display: inline-block;
+        padding: 15px;
+        margin: 20px;
+      }
+
+      .area label{
+        vertical-align: top;
+      }
+
+      .customise {
+        text-align: center;
+        padding-top:20px;
+        margin-top:10px;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <h1>Your site</h1>
+    </nav>
+
+    <div class="container">
+      <header>
+        <h1>This is your header</h1>
+      </header>
+
+      <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+    </div>
+
+    <section class="customise">
+      <h1>Edit style</h1>
+      <div class="area">
+        <h3>nav bar</h3>
+        <div>
+          <label>height</label> <input type="range" name="navHeight" value="20" min="20" max="100" data-sizing="px">
+        </div>
+      </div>
+
+      <div class="area">
+        <h3>Container</h3>
+        <div>
+          <label>Padding</label> <input type="range" name="containerPadding" value="10" min="20" max="100" data-sizing="px">
+        </div>
+        <div>
+          <label>Width</label> <input type="range" name="containerWidth" value="500" min="320" max="980" data-sizing="px">
+        </div>
+      </div>
+
+      <div class="area">
+        <h3>Header</h3>
+        <div>
+          <label>height</label> <input type="range" name="headerHeight" value="200" min="20" max="400" data-sizing="px">
+        </div>
+        <div>
+          <label>font-size</label> <input type="range" name="headerTitle" value="20" min="20" max="50" data-sizing="px">
+        </div>
+      </div>
+
+      <div class="area">
+        <h3>Paragraph</h3>
+        <div>
+          <label>font-size</label> <input type="range" name="textSize" value="14" min="14" max="22" data-sizing="px">
+        </div>
+      </div>
+    </section>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
